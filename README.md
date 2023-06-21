@@ -1,1 +1,1 @@
-# Licenta-Copie
+# Licenta
