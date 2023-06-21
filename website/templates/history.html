@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}History{% endblock %}
+
+{% block content %}
+    <h2 class="m-3">Identificare Violență</h2>
+    <div class="list-group">
+        {% for link in linkuri_model1 %}
+            <a class="list-group-item list-group-item-action" aria-current="true" href="{{link}}">{{nume_model1[linkuri_model1.index(link)].split('/')[3]}}</a>
+        {% endfor %}
+    </div>
+    <h2 class="m-3">Identificare Bagaje Abandonate</h2>
+    <div class="list-group">
+        {% for link in linkuri_model2 %}
+            <a class="list-group-item list-group-item-action" aria-current="true" href="{{link}}">{{nume_model2[linkuri_model2.index(link)].split('/')[3]}}</a>
+        {% endfor %}
+    </div>
+{% endblock %}

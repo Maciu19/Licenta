@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Profil{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        <br />
+        <h2 class="m-3"> Email - <b>{{email}}</b> </h2>
+        <h2 class="m-3"> 
+            Email verificat - 
+            {% if email_verificat == True %} 
+                <b>Da</b>
+            {% else %}
+                Nu
+                <button class="btn btn-success w-25 ms-3" type="submit" name="verificare_email" value="verificare_email">Verificare Email</button>
+            {% endif %}
+        </h2>
+        <h2 class="m-3">
+            Schimbarea parolei se face prin email  
+            <button class="btn btn-success w-25 ms-3" type="submit" name="schimbare_parola" value="schimbare_parola">Schimbare Parola</button>
+        </h2>
+    </form>
+{% endblock %}

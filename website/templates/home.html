@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Acasă{% endblock %}
+
+{% block content %}
+    <h2 class="m-2" >În această aplicație web am implementat 2 modele de Deep Learning </h2>
+    <br />
+    <h3 class="m-2"> <b>Identificare Violență</b>: Algoritmul va genera în colțul stanga sus o etichetă, Agresiv/Neagresiv în funcție de tipul acțiunii prezente în videoclip. </h3>
+
+    <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+            <img class="p-2 m-1" src="{{ url_for('static', filename='images/agg.png') }}" alt="NonAggresive" width="480" height="300">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img class="p-2 m-1" src="{{ url_for('static', filename='images/non.png') }}" alt="Aggresive" width="480" height="300">
+        </div>
+    </div>
+
+    <h3 class="m-2"> <b>Identificare Bagaje Abandonate</b>: Algoritmul va genera un dreptunghi pentru fiecare etichetă. Etichetele pot fi: persoane, valiză, geantă, rucsac. În momentul în care exista o distanță suficient de mare între unul dintre bagaje (valiză, geantă, rucsac) și toate persoanele prezente, se va face un dreptunghi de culoare roșie cu titlul "Abandonat". </h3>
+
+    <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center">
+            <img class="p-2 m-1" src="{{ url_for('static', filename='images/abandonat.png') }}" alt="Abandonat" width="480" height="300">
+        </div>
+        <div class="d-flex justify-content-center">
+            <img class="p-2 m-1" src="{{ url_for('static', filename='images/non_abandonat.png') }}" alt="Neabandonat" width="480" height="300">
+        </div>
+    </div>
+{% endblock %}
